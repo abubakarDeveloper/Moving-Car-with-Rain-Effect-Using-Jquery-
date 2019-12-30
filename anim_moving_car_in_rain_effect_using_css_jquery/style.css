@@ -1,0 +1,117 @@
+
+   html {height: 100%; width:100%}
+
+body{
+	margin: 0;
+background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);}
+.night{
+	height: 80vh;
+	width: 70vw;
+	margin: 5rem auto;
+	background: url('./assets/Img_1.png');
+	background-size: cover;
+	position: relative;
+	box-shadow: 1px,2px, 60px rbga(0,0,0,0.4);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.day{
+	height: 80vh;
+	width: 70vw;
+	margin: 5rem auto;
+	background: url('./assets/Img_07.png');
+	background-size: cover;
+	position: relative;
+	box-shadow: 1px,2px, 60px rbga(0,0,0,0.4);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.surface{
+	height: 140px;
+	width: 500%;
+	background: url('./assets/Img_02.png');
+	display: block;
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	background-repeat: repeat-x;
+}
+.car{
+	position: absolute;
+	bottom: 8%;
+	left: 24%;
+}
+
+/*Animation*/
+
+@keyframes moveRight{
+	100%{transform:translateX(-2950px);}
+}
+@keyframes moveLeft{
+	100%{transform:translateX(2000px);}
+}
+@keyframes suspension{
+	100%{
+		transform: translateY(-1px);
+	}
+	50%{
+		transform: translateY(2px);
+	}
+	0%
+	{
+		transform: translateY(-1px);
+	}
+}
+
+.moveRight{
+	animation: moveRight 6s linear infinite;
+
+}
+
+.moveLeft{
+	animation: moveLeft 6s linear infinite;
+
+}
+.suspension{
+	animation: suspension 1s linear infinite;
+}
+/* for wbegradientss:;
+https://webgradients.com/
+	for images
+	https://www.pexels.com/
+*/
+
+
+
+
+/*rain effect*/
+   .drop {
+    /*
+    background:-webkit-gradient(linear, 0% 0%, 0%, 100%, from(rgba(13,52,58,1)), to (rgba(255,255,255,0.6)));
+    background:-moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,0.6) 100%);
+    */
+    background: #FFFFFF;
+    width: 1px;
+    height: 89px;
+    position: absolute;
+    bottom: 200px;
+    -webkit-animation: fall .60s linear infinite;
+    -moz-animation: fall .60s linear infinite;
+   }
+   
+   @-webkit-keyframes fall { to {margin-top: 900px;}}
+   @-moz-keyframes fall { to {margin-top: 900px;}}
+
+   .vanished{
+   	background: transparent;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+    -webkit-animation: vanishedFall .1s linear;
+    -moz-animation: vanishedFall .1s linear;
+
+   }
+
+   @-webkit-keyframes vanishedFall { to {margin-top: 100px;}}
+   @-moz-keyframes vanishedFall { to {margin-top: 100px;}}
